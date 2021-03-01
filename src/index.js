@@ -8,7 +8,7 @@ const trackRoutes = require('./routes/trackRoutes');
 
 const app = express();
 
-const port = 3000;
+const port = process.env.PORT && 3000;
 const mongoUri = 'mongodb+srv://admin:passwordpassword@cluster0.rtnra.gcp.mongodb.net/trackme?retryWrites=true&w=majority';
 
 mongoose.connect(mongoUri, {
