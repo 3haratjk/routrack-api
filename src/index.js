@@ -32,6 +32,10 @@ app.get('/', requireAuth, (req, res) => {
 });
 
 
+app.get('/favicon.ico', (req, res) => {
+    res.sendFile('./favicon.ico');
+})
+
 
 app.listen(port, () => {
     console.log(`Listening on port: ${port}`);
